@@ -1,0 +1,16 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="512" height="512" rx="112" fill="#151C2C"/>
+<rect x="72" y="146" width="368" height="294" rx="72" fill="#F5F7FA"/>
+<rect x="104" y="92" width="170" height="96" rx="32" fill="#F5F7FA"/>
+<rect x="132" y="116" width="112" height="30" rx="15" fill="#151C2C"/>
+<rect x="104" y="176" width="304" height="232" rx="52" fill="#151C2C"/>
+<circle cx="168" cy="310" r="60" fill="#4D8DFF"/>
+<circle cx="168" cy="300.6" r="17" fill="#F5F7FA"/>
+<path d="M132 358.6C132 337.15 147.84 319.6 168 319.6C188.16 319.6 204 337.15 204 358.6H132Z" fill="#F5F7FA"/>
+<circle cx="344" cy="310" r="60" fill="#FF963D"/>
+<circle cx="344" cy="300.6" r="17" fill="#F5F7FA"/>
+<path d="M308 358.6C308 337.15 323.84 319.6 344 319.6C364.16 319.6 380 337.15 380 358.6H308Z" fill="#F5F7FA"/>
+<circle cx="256" cy="246" r="74" fill="#35C47A"/>
+<circle cx="256" cy="234.44" r="21" fill="#F5F7FA"/>
+<path d="M211 305.84C211 279.44 230.8 257.84 256 257.84C281.2 257.84 301 279.44 301 305.84H211Z" fill="#F5F7FA"/>
+</svg>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profile Groups</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+  <header>
+    <p class="eyebrow">Profile Groups</p>
+    <p class="tagline">Give each tab group its own cookie jar</p>
+  </header>
+
+  <p id="note" role="alert" hidden></p>
+
+  <main id="list" aria-live="polite"></main>
+
+  <footer>
+    <details>
+      <summary>About data storage</summary>
+      <p>Switching sessions reloads the tab. Local storage and IndexedDB are still shared between groups — only cookies are isolated.</p>
+    </details>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

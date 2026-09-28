@@ -1,0 +1,322 @@
+/* ============================================================
+   Design tokens — warm editorial palette (madhugb-inspired)
+   ============================================================ */
+:root {
+  --bg:      #faf8f4;
+  --ink:     #1c1812;
+  --mid:     #9a9185;
+  --rule:    #e5e0d8;
+  --accent:  #c4622d;
+  --type:    'EB Garamond', Georgia, serif;
+  --sans:    'Jost', system-ui, -apple-system, sans-serif;
+  color-scheme: light;
+}
+
+/* ============================================================
+   Reset & Base
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  width: 340px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--type);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   Header
+   ============================================================ */
+header {
+  padding: 18px 20px 14px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.eyebrow {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 4px;
+}
+
+.tagline {
+  font-family: var(--type);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+/* ============================================================
+   Error / alert note
+   ============================================================ */
+#note {
+  margin: 0;
+  padding: 10px 20px;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  border-bottom: 1px solid var(--rule);
+  border-left: 2px solid var(--accent);
+  background: rgba(196, 98, 45, 0.04);
+}
+
+/* ============================================================
+   Group list
+   ============================================================ */
+#list {
+  /* rows self-separate with border-top */
+}
+
+/* ============================================================
+   Group row
+   ============================================================ */
+.row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: start;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--rule);
+  transition: background 0.15s;
+}
+
+.row.active {
+  background: rgba(196, 98, 45, 0.03);
+}
+
+/* ============================================================
+   Row metadata
+   ============================================================ */
+.name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+/* color dot next to name */
+.dot {
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--c, var(--mid));
+  margin-top: 2px;
+}
+
+.name {
+  font-family: var(--type);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+/* "ACTIVE" uppercase label */
+.badge {
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.status {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--mid);
+  line-height: 1.45;
+  margin-bottom: 0;
+}
+
+/* Clear logins action */
+.actions {
+  margin-top: 7px;
+}
+
+.link {
+  display: inline;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: var(--sans);
+  font-size: 10.5px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.15s;
+}
+
+.link:hover { opacity: 1; text-decoration: underline; text-underline-offset: 2px; }
+.link:focus-visible { outline: 1px solid var(--accent); outline-offset: 3px; }
+
+/* ============================================================
+   Toggle switch
+   ============================================================ */
+button { font: inherit; color: inherit; cursor: pointer; }
+button:focus-visible { outline: 1px solid var(--accent); outline-offset: 3px; }
+button:disabled { cursor: not-allowed; opacity: 0.35; }
+
+.switch {
+  flex-shrink: 0;
+  position: relative;
+  margin-top: 4px;
+  width: 38px;
+  height: 21px;
+  padding: 0;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--bg);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.switch::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--rule);
+  transition: transform 0.22s ease, background 0.2s;
+}
+
+.switch[aria-checked="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.switch[aria-checked="true"]::after {
+  background: var(--bg);
+  transform: translateX(17px);
+}
+
+/* ============================================================
+   Empty state
+   ============================================================ */
+.empty {
+  padding: 28px 20px 24px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.empty-title {
+  display: block;
+  font-family: var(--type);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.empty-desc {
+  font-family: var(--sans);
+  font-size: 11.5px;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  color: var(--mid);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.empty-steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.empty-steps li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  color: var(--mid);
+  line-height: 1.5;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.empty-steps li:last-child { border-bottom: none; padding-bottom: 0; }
+
+.step-num {
+  flex-shrink: 0;
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 200;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  padding-top: 1px;
+}
+
+/* ============================================================
+   Footer (collapsible)
+   ============================================================ */
+footer {
+  padding: 12px 20px 14px;
+}
+
+footer details {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--mid);
+}
+
+footer details summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--sans);
+  font-size: 9.5px;
+  font-weight: 200;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid);
+  padding: 2px 0;
+  user-select: none;
+  transition: color 0.15s;
+}
+
+footer details summary::-webkit-details-marker { display: none; }
+footer details summary:hover { color: var(--ink); }
+footer details summary:focus-visible { outline: 1px solid var(--accent); outline-offset: 3px; }
+
+footer details p {
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.65;
+  color: var(--mid);
+}
+
+/* ============================================================
+   Reduced motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .switch::after,
+  .row,
+  .link { transition: none; }
+}
